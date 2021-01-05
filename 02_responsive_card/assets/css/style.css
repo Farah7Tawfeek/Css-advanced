@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  height: 400px;
+  width: 250px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 10px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.card .card_banner {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card .card_banner img {
+  height: 100%;
+}
+
+.card .card_info {
+  padding: 20px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .card_info .date {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+
+.card .card_info .title {
+  color: blue;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+.card .card_info .paragraph {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+}
+
+.card .card_info .readmore-btn {
+  border: 0;
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Tablet devices */
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    width: 400px;
+    height: 250px;
+    overflow: visible;
+  }
+  .card .card_banner {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  .card .card_banner .glassy {
+    width: 100%;
+    height: 80%;
+    transform: translateX(-20%);
+    border-radius: 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card .card_banner .glassy img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .card .card_banner .glassy:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    background: linear-gradient(
+        217deg,
+        rgba(255, 0, 0, 0.8),
+        rgba(255, 0, 0, 0) 70.71%
+      ),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    opacity: 0.8;
+  }
+
+  .card .card_info {
+    width: 60%;
+    height: 100%;
+  }
+
+  .card .card_info .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .card .card_info .paragraph {
+    font-size: 13px;
+    white-space: unset;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card .card_info .paragraph {
+    font-size: 24px;
+  }
+}
