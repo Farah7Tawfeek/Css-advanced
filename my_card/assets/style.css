@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    width: 700px;
+    height: 100vh;
+    background: url('https://st3.depositphotos.com/5454582/13085/v/1600/depositphotos_130859872-stock-illustration-floral-pattern-flourish-tiled-oriental.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.card {
+    background-color: linen;
+    border: mediumblue solid 2px;
+    text-align: center;
+    padding: 10px;
+}
+
+h3,i {
+    display: inline;
+}
+
+span {
+    font-size: 10px;
+}
+
+h3,h1,h5 {
+    margin: 0;
+}

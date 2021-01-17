@@ -12,12 +12,8 @@ body {
     color: #CC5A0A;
 }
 
-.blue {
-    color: #0A7CCC;
-}
-
 .bg_color {
-    background-color: chartreuse;
+    background-color: #CC5A0A;
     width: 100%; 
     height: 20px;
 }
@@ -39,18 +35,18 @@ body {
     flex-direction: column;
     border: rgb(156, 156, 156) solid 2px;
     margin: 15px;
+    padding: 10px;
+    text-align: center;
 }
 
-.card_img_wrapper {
-    padding: 10px;
+.card_details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .card_img {
     width: 100%;
-}
-
-.card_text {
-    padding: 10px;
 }
 
 .card_title,
@@ -59,7 +55,7 @@ body {
 }
 
 .card_date {
-    padding: 5px 5px;
+    color: #CC5A0A;
 }
 
 /* Tablet View*/
@@ -75,6 +71,7 @@ body {
 
     .card_text {
         width: 60%;
+        margin: 23px 16px;
     }
 
     .cover_info {
@@ -90,30 +87,23 @@ body {
     }
 }
 
+/* Laptop View*/
 @media (min-width: 1024px) {
-
     .wrapper {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
-    
+
     .card {
-        width: 40%;
-        height: 350px;
+        width: 20%;
         flex-direction: column;
     }
 
-    .cover_info {
-        padding:5px;
-        margin:5px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .card_img_wrapper {
-        width: 30%;
-        height: 20%;
-
+    .cover_info,
+    .card_img_wrapper,
+    .card_text {
+        width:100%;
+        margin: 0;
     }
 }
